@@ -1,3 +1,130 @@
-h1{
-    color: red
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(179, 179, 179);
+  
+  margin: 0%;
+  padding: 0%;
 }
+
+header h1{
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+
+body{
+    background-color: black;  
+    width:  100%;
+    height: 100%;
+}
+
+header{
+    background-color: rgb(75, 75, 75);
+    padding: 3rem;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+input{
+    width: 85%;
+    background-color: black;
+    color: rgb(75, 75, 75);
+    font-size: 100%;
+    padding: 0.6rem;
+    font-style: italic;
+    font-weight: bolder;
+
+}
+
+button:hover{
+    background-color: rgb(155, 155, 155);
+    color: black;
+}
+
+button{
+    width: 25%;
+    background-color: black;
+    color: rgb(75, 75, 75);
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 25%;
+}
+
+section#tasks{
+    margin: 20px;
+
+}
+
+ul{
+    list-style: upper-roman;
+    
+    
+}
+
+ul li{
+
+    position: relative;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    
+}
+
+ul li a{
+    text-decoration: none;
+    
+    
+
+}
+
+ul li:hover{
+    background-color: rgb(75, 75, 75);
+}
+
+ul li a span{
+    padding-left: 10px;
+    font-size: 0.7rem;
+    font-style: italic;
+    text-align: right;
+}
+
+a.btnEdit{
+    padding: 1rem;
+}
+
+.message{
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    width: auto;
+    z-index: 9999;
+    font-size: 1rem;
+    font-weight: 700;
+    
+    
+    
+    justify-content: space-between;
+    display: flex;
+    
+}
+
+.message-danger{
+    background-color: rgb(255, 5, 5);
+    color: black;
+}
+
+.message-success{
+    background-color: rgb(72, 255, 66);
+    color: black;
+}
+
+span#close-message{
+    font-weight: 900;
+    padding-right: 1rem;
+}
+
