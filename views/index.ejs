@@ -20,7 +20,7 @@
     </form>
     <% } else { %>
     <form action="/update/<%= task.id%>" method="POST">
-        <input type="text" name="taskUpd" id="taskUpdt" value="<%= task.task %>">
+        <input type="text" name="task" id="task" value="<%= task.task %>">
         <button id="addButton" type="submit">Refresh</button>
     </form>
     <% } %>
@@ -33,7 +33,7 @@
             <%= task.task %>
             <%= task.createdAt.toLocaleDateString('pt-br') %>
             <a href="/getById/<%= task.id %>">Edit</a>
-            <a href="">Delete</a>
+            <a href="/delete/<%= task.id %> ">Delete</a>
         </li>
         <% }) %>
     </ul>

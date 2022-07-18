@@ -41,12 +41,22 @@ const createTask = async (req, res) => {
 
 const updateTask = async (req,res) =>{
 try {
+ 
   const task = req.body;
-  await Task.updateOne(task, {where: {id: req.params.id}});
+  await Task.update(task, {where: {id: req.params.id}});
   res.redirect("/")  
 } catch (err) {
   res.status(500).send({ error: err.message });
 
+}
+};
+
+const deleteTask = async(req,res) =>{
+try {
+  await Task.destroy({where: {id: req.params.id}}).then(function(){
+    res.redirect("/")
+  })} catch (err) {
+  res.status(500).send({ error: err.message });
 }
 };
 
@@ -55,6 +65,7 @@ module.exports = {
   createTask,
   getById,
   updateTask,
+  deleteTask,
   
  
   
