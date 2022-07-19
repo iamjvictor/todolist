@@ -15,7 +15,7 @@ async () => {
 };
 
 const app = express();
-const port = process.env.PORT ;
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
@@ -24,6 +24,6 @@ app.use(routes);
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.listen(process.env.PORT, () =>
+app.listen(process.env.PORT || 3000, () =>
   console.log(`Server rodando na porta http://localhost:${port}`)
 );
