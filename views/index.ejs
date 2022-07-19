@@ -39,8 +39,8 @@
 <section id="tasks">
     <ul>
         <% taskList.forEach((task)=>{ %>
-        <li>
-            <a href="/"><%= task.task %>
+        <li class="check-<%= task.check %>">
+            <a href="/check/<%= task.id %>" class="check-<%= task.check %>"><%= task.task %>
             <span>  
                 Created in: <%= task.createdAt.toLocaleDateString('pt-br') %>
             </span>  

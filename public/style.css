@@ -76,6 +76,7 @@ ul li{
 
 ul li a{
     text-decoration: none;
+    padding-left: 2rem;
     
     
 
@@ -128,3 +129,30 @@ span#close-message{
     padding-right: 1rem;
 }
 
+ul li.check-true{
+    background-color: rgba(211, 211, 211, 0.253);
+    text-decoration: line-through;
+}
+
+ul li a.check-true::before{
+    content: "";
+    position: absolute;
+    border: rgb(155, 155, 155) solid;
+    top: 9px;
+    left: 13px;
+    height: 15px;
+    width: 7px;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+ul li a.check-false::before{
+    content: "";
+    position: absolute;
+    border: rgb(155, 155, 155) solid;
+    top: 8px;
+    left: 8px;
+    height: 14px;
+    width: 14px;
+    border-width: 2px;
+    
+}

@@ -10,6 +10,7 @@ const getAll = async (req, res) => {
       
       }, 500);
       const taskList= await Task.findAll({});
+      
       return res.render("index", {
         taskList,
         task: null,
@@ -81,12 +82,27 @@ try {
 }
 };
 
+const checkTask = async(req,res) => {
+  try {
+    const task = await Task.findOne({where: {id: req.params.id}});
+
+    task.check ? check = false : check = true;
+    await Task.update({
+      check : check,
+    }, {where: {id: req.params.id},});
+    res.redirect("/");
+  } catch (err) {
+    res.status(500).send({ error: err.message });
+  }
+}
+
 module.exports = {
   getAll,
   createTask,
   getById,
   updateTask,
   deleteTask,
+  checkTask,
   
  
   

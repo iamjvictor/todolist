@@ -4,13 +4,15 @@ const sequelize = require("../database/db.js");
 const post = sequelize.define("postagens", {
   task: {
     type: Sequelize.STRING,
+    require: true,
   },
   check: {
     type: Sequelize.BOOLEAN,
+    defaultValue: false,
   },
   date: {
     type: Sequelize.DATE,
-    default: Date.now(),
+    defaultValue: Date.now(),
   },
 });
 
