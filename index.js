@@ -24,6 +24,6 @@ app.use(routes);
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.listen(process.env.PORT || 3000, () =>
+app.listen(port, () =>
   console.log(`Server rodando na porta http://localhost:${port}`)
 );
