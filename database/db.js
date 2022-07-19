@@ -6,7 +6,7 @@ const sequelize = new Sequelize({
   username: process.env.USERDB,
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
-  
+  dialect: 'mysql',
   multipleStatements: true
 });
 
