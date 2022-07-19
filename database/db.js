@@ -1,9 +1,13 @@
 //import { Sequelize, Model, DataTypes } from "sequelize";
 const Sequelize = require('sequelize')
 
-const sequelize = new Sequelize("todo", "root", "250202joaov", {
-  host: "localhost",
-  dialect: "mysql",
+const sequelize = new Sequelize({
+  host: process.env.HOST,
+  username: process.env.USERDB,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE,
+  dialect: process.env.DIALECT,
+  multipleStatements: true
 });
 
 sequelize.authenticate()
